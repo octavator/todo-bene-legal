@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr" data-title-fr="Todo Bene — Confidentialité" data-title-en="Todo Bene — Privacy">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todo Bene — Confidentialité</title>
+    <meta
+      name="description"
+      content="Ce que Todo Bene collecte, pourquoi, où c’est hébergé, et comment tout supprimer."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,100&family=Karla:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./doc.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a class="logo" href="./index.html"><span class="ticks">✓✓</span>Todo Bene</a>
+        <button class="lang" id="langBtn" aria-label="Switch language">EN</button>
+      </header>
+
+      <main class="doc">
+        <h1 data-fr="Confidentialité" data-en="Privacy"></h1>
+        <p class="meta" data-fr="En vigueur au 17 août 2026" data-en="Effective 17 August 2026"></p>
+
+        <p
+          class="lead"
+          data-fr="Todo Bene est une liste partagée entre deux personnes. Il sait donc des choses très ordinaires et très intimes : ce que vous avez à faire, ce que vous achetez, ce que vous préparez en secret pour l’autre. Cette page dit exactement ce qui est collecté, pourquoi, où c’est stocké, et comment tout effacer."
+          data-en="Todo Bene is a list shared between two people. That means it knows things that are both very ordinary and very intimate: what you have to do, what you buy, what you are quietly planning for the other person. This page says exactly what is collected, why, where it is stored, and how to erase all of it."
+        ></p>
+
+        <h2 data-fr="Ce qui est collecté" data-en="What is collected"></h2>
+        <table>
+          <thead>
+            <tr>
+              <th data-fr="Donnée" data-en="Data"></th>
+              <th data-fr="Pourquoi" data-en="Why"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-fr="Adresse email" data-en="Email address"></td>
+              <td
+                data-fr="Créer le compte, s’y connecter, réinitialiser le mot de passe."
+                data-en="Creating your account, signing in, resetting your password."
+              ></td>
+            </tr>
+            <tr>
+              <td data-fr="Prénom affiché" data-en="Display name"></td>
+              <td
+                data-fr="Nommer ta liste perso et montrer qui a ajouté quoi. Modifiable à tout moment dans Réglages."
+                data-en="Labelling your personal list and showing who added what. Editable any time in Settings."
+              ></td>
+            </tr>
+            <tr>
+              <td data-fr="Contenu des tâches" data-en="Task content"></td>
+              <td
+                data-fr="C’est l’app. Les tâches marquées privées ne sont visibles que par toi, y compris sur les listes partagées."
+                data-en="It is the app. Tasks you mark private are visible only to you, including on shared lists."
+              ></td>
+            </tr>
+            <tr>
+              <td data-fr="Jeton de notification" data-en="Push notification token"></td>
+              <td
+                data-fr="Identifiant anonyme de l’appareil, fourni par Apple ou Google, pour livrer les notifications. Enregistré uniquement si tu les acceptes."
+                data-en="An anonymous device identifier from Apple or Google, used to deliver notifications. Stored only if you allow them."
+              ></td>
+            </tr>
+            <tr>
+              <td data-fr="Événements d’usage" data-en="Usage events"></td>
+              <td
+                data-fr="Des compteurs, pas du contenu — voir plus bas."
+                data-en="Counters, not content — see below."
+              ></td>
+            </tr>
+            <tr>
+              <td data-fr="Rapports de plantage" data-en="Crash reports"></td>
+              <td
+                data-fr="Diagnostic technique quand l’app plante — voir plus bas."
+                data-en="Technical diagnostics when the app crashes — see below."
+              ></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p
+          data-fr="Aucune publicité, aucun traçage entre applications ou sites, aucune revente de données. Ni localisation, ni contacts, ni photos, ni carnet d’adresses. Aucun SDK Meta ou Google."
+          data-en="No advertising, no cross-app or cross-site tracking, no selling of data. No location, no contacts, no photos, no address book. No Meta or Google SDKs."
+        ></p>
+
+        <h2 data-fr="Mesure d’usage" data-en="Usage analytics"></h2>
+        <p
+          data-fr="Todo Bene utilise PostHog, hébergé dans l’Union européenne, pour compter des étapes : inscription, email confirmé, espace créé, espace rejoint, première tâche, première synchro avec le ou la partenaire. Ce sont des compteurs. Le nom de l’événement est envoyé, et rien d’autre — jamais un titre de tâche, jamais une adresse email, jamais un prénom, jamais un code d’invitation. C’est une contrainte du code lui-même : la fonction qui envoie ces événements n’a pas de paramètre où glisser du contenu. Les événements sont rattachés à l’identifiant aléatoire de ton compte, pour distinguer une personne de six compteurs sans lien."
+          data-en="Todo Bene uses PostHog, hosted in the European Union, to count steps: sign-up, email confirmed, space created, space joined, first task, first sync with your partner. These are counters. The event name is sent and nothing else — never a task title, never an email address, never a name, never an invite code. That is enforced by the code itself: the function that sends these events has no parameter through which content could travel. Events are attached to your account's random identifier, so a person can be told apart from six unrelated counters."
+        ></p>
+
+        <h2 data-fr="Rapports de plantage" data-en="Crash reports"></h2>
+        <p
+          data-fr="Todo Bene utilise Sentry pour être prévenu quand l’app plante. Un rapport contient l’endroit du code qui a échoué, la version de l’app et le modèle d’appareil. L’enregistrement d’écran et le suivi de parcours sont désactivés — pas laissés à leur réglage par défaut, désactivés explicitement. Un rapport de plantage peut néanmoins contenir des fragments techniques incidents ; c’est la raison pour laquelle cette section existe plutôt que d’affirmer l’impossible."
+          data-en="Todo Bene uses Sentry to be told when the app crashes. A report contains where in the code it failed, the app version and the device model. Session replay and performance tracing are off — not left at a default, explicitly disabled. A crash report can still contain incidental technical fragments, which is why this section exists rather than claiming otherwise."
+        ></p>
+
+        <h2 data-fr="Où c’est stocké" data-en="Where it is stored"></h2>
+        <p
+          data-fr="Le compte et les tâches sont hébergés par Supabase, dans l’Union européenne, et transmis en HTTPS chiffré. Les notifications passent par le service de notifications d’Expo, puis par Apple ou Google, qui reçoivent le titre de la notification pour pouvoir l’afficher. Le jeton de session reste sur ton téléphone pour te garder connecté(e). Aucun autre tiers ne reçoit tes données."
+          data-en="Your account and tasks are hosted by Supabase, in the European Union, and transmitted over encrypted HTTPS. Notifications travel through Expo's push service and then Apple or Google, who receive the notification's text in order to display it. Your session token stays on your phone to keep you signed in. No other third party receives your data."
+        ></p>
+
+        <h2 data-fr="Ce que ton ou ta partenaire voit" data-en="What your partner sees"></h2>
+        <p
+          data-fr="Vos deux listes personnelles et vos deux listes partagées — sauf les tâches marquées privées, qui ne sont visibles que par la personne qui les a créées, même sur une liste partagée. Personne d’autre que vous deux ne voit quoi que ce soit : chaque espace est isolé au niveau de la base de données."
+          data-en="Both of your personal lists and both shared lists — except tasks marked private, which are visible only to whoever created them, even on a shared list. Nobody outside the two of you sees anything: each space is isolated at the database level."
+        ></p>
+
+        <h2 data-fr="Quitter, exporter, supprimer" data-en="Leaving, exporting, deleting"></h2>
+        <p
+          data-fr="Tout se fait depuis l’app, dans Réglages, sans nous écrire :"
+          data-en="All of this is in the app, under Settings, without writing to us:"
+        ></p>
+        <ul>
+          <li
+            data-fr="<strong>Exporter mes données</strong> — un fichier JSON avec ton compte, votre espace et tes tâches, que tu peux enregistrer ou t’envoyer."
+            data-en="<strong>Export my data</strong> — a JSON file with your account, your space and your tasks, to save or send to yourself."
+          ></li>
+          <li
+            data-fr="<strong>Quitter cet espace</strong> — si ton ou ta partenaire reste, les tâches partagées restent chez elle ou lui et tu pars sans rien. Si tu es la dernière personne, l’espace et toutes ses tâches sont supprimés."
+            data-en="<strong>Leave this space</strong> — if your partner stays, the shared tasks stay with them and you leave with nothing. If you are the last one, the space and every task in it are deleted."
+          ></li>
+          <li
+            data-fr="<strong>Supprimer mon compte</strong> — définitif. Même règle : les tâches partagées que tu as ajoutées restent chez ton ou ta partenaire pour que ses listes continuent de fonctionner ; ta liste perso et tes tâches privées sont supprimées. S’il ne reste personne, tout est supprimé."
+            data-en="<strong>Delete my account</strong> — permanent. Same rule: shared tasks you added stay with your partner so their lists keep working; your personal list and your private tasks are deleted. If nobody is left, everything is deleted."
+          ></li>
+        </ul>
+        <p
+          data-fr="Les données sont conservées tant que le compte existe, et pas au-delà."
+          data-en="Data is kept for as long as the account exists, and no longer."
+        ></p>
+
+        <h2 data-fr="Tes droits" data-en="Your rights"></h2>
+        <p
+          data-fr="Dans l’Union européenne, le RGPD te donne le droit d’accéder à tes données, de les corriger, de les exporter, de les faire supprimer, et de t’opposer à leur traitement. L’export et la suppression sont dans l’app ; pour tout le reste, écris-nous et on répond sous 48 heures ouvrées."
+          data-en="In the European Union, the GDPR gives you the right to access your data, correct it, export it, have it deleted, and object to its processing. Export and deletion are in the app; for anything else, write to us and we answer within 48 working hours."
+        ></p>
+
+        <h2 data-fr="Enfants" data-en="Children"></h2>
+        <p
+          data-fr="Todo Bene ne s’adresse pas aux moins de 13 ans et ne collecte pas sciemment leurs données."
+          data-en="Todo Bene is not directed at children under 13 and does not knowingly collect their data."
+        ></p>
+
+        <h2 data-fr="Modifications" data-en="Changes"></h2>
+        <p
+          data-fr="Cette page peut évoluer. Un changement important s’accompagne d’une nouvelle date en haut, et d’un message dans l’app s’il touche à ce qui est collecté."
+          data-en="This page may change. A material change comes with a new date at the top, and an in-app message if it affects what is collected."
+        ></p>
+
+        <h2 data-fr="Nous écrire" data-en="Contact"></h2>
+        <p>
+          <a href="mailto:todobene.app@gmail.com">todobene.app@gmail.com</a>
+        </p>
+      </main>
+
+      <footer>
+        <span
+          class="serif"
+          data-fr="Todo Bene — fait avec ❤️ pour ceux qui partagent une vie et une liste."
+          data-en="Todo Bene — made with ❤️ for people who share a life and a list."
+        ></span>
+        <nav>
+          <a href="./index.html" data-fr="Accueil" data-en="Home"></a>
+          <a href="./support.html" data-fr="Aide" data-en="Support"></a>
+          <a href="mailto:todobene.app@gmail.com">todobene.app@gmail.com</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script src="./doc.js"></script>
+  </body>
+</html>

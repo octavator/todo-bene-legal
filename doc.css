@@ -1,0 +1,217 @@
+/*
+ * Shared styling for the two document pages (privacy, support).
+ *
+ * `index.html` keeps its styles inline because it is one long bespoke landing page and the
+ * inline block is what makes it a single self-contained file. These two are prose, they
+ * look identical to each other, and duplicating 200 lines of CSS between them is how the
+ * privacy page ends up looking subtly different from the support page six months from now.
+ * Same tokens and fonts as index.html.
+ */
+
+:root {
+  --paper: #fff6ee;
+  --ink: #33241f;
+  --ink-soft: #7a6a62;
+  --rose: #ff7fa0;
+  --rose-deep: #e85d82;
+  --card: #fffdf9;
+  --line: #ebd9cc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--rose);
+  text-underline-offset: 3px;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- header ---------- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+}
+.logo {
+  font-family: 'Fraunces', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.logo .ticks {
+  color: var(--rose-deep);
+  letter-spacing: -0.35em;
+  margin-right: 0.45em;
+}
+.lang {
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  border-radius: 999px;
+  font:
+    700 0.8rem 'Karla',
+    sans-serif;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.lang:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* ---------- document ---------- */
+.doc {
+  padding: 24px 0 64px;
+}
+.doc h1 {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'SOFT' 100;
+  font-weight: 550;
+  font-size: clamp(2.1rem, 5vw, 3rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+.doc h2 {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'SOFT' 100;
+  font-weight: 550;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin: 40px 0 10px;
+}
+.doc h3 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin: 24px 0 4px;
+}
+.doc .meta {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+.doc .lead {
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  margin-top: 22px;
+}
+.doc p {
+  margin-top: 12px;
+}
+.doc ul {
+  margin: 12px 0 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+.doc li {
+  position: relative;
+  padding-left: 26px;
+  margin-top: 10px;
+}
+.doc li::before {
+  content: '✓✓';
+  position: absolute;
+  left: 0;
+  color: var(--rose-deep);
+  font-weight: 700;
+  letter-spacing: -0.3em;
+}
+
+/* Wide content scrolls inside its own box rather than the page. */
+.doc table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 18px;
+  font-size: 0.95rem;
+}
+.doc th,
+.doc td {
+  text-align: left;
+  vertical-align: top;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+}
+.doc thead th {
+  background: var(--card);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ---------- footer ---------- */
+footer {
+  border-top: 2px solid var(--ink);
+  padding: 28px 0 56px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+footer .serif {
+  font-family: 'Fraunces', serif;
+  max-width: 34ch;
+}
+footer nav {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 620px) {
+  .doc h2 {
+    margin-top: 32px;
+  }
+}
+
+/* ---------- index cards (legal-index.html) ---------- */
+.doc .card {
+  display: block;
+  background: var(--card);
+  border: 1.5px solid var(--line);
+  border-radius: 18px;
+  padding: 20px 22px;
+  margin-top: 14px;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+.doc .card:hover {
+  transform: translateY(-3px);
+  border-color: var(--rose);
+}
+.doc .card b {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'SOFT' 100;
+  font-weight: 550;
+  font-size: 1.15rem;
+  display: block;
+}
+.doc .card span {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
