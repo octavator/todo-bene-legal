@@ -25,7 +25,11 @@
 
       <main class="doc">
         <h1 data-fr="Confidentialité" data-en="Privacy"></h1>
-        <p class="meta" data-fr="En vigueur au 17 août 2026" data-en="Effective 17 August 2026"></p>
+        <p
+          class="meta"
+          data-fr="En vigueur au 12 novembre 2026"
+          data-en="Effective 12 November 2026"
+        ></p>
 
         <p
           class="lead"
@@ -84,6 +88,13 @@
                 data-en="Technical diagnostics when the app crashes — see below."
               ></td>
             </tr>
+            <tr>
+              <td data-fr="Historique d’achat" data-en="Purchase history"></td>
+              <td
+                data-fr="Seulement si vous prenez Premium : l’offre et ses dates, pour savoir s’il est actif — voir plus bas."
+                data-en="Only if you take Premium: the plan and its dates, to know whether it is active — see below."
+              ></td>
+            </tr>
           </tbody>
         </table>
 
@@ -104,10 +115,16 @@
           data-en="Todo Bene uses Sentry to be told when the app crashes. A report contains where in the code it failed, the app version and the device model. Session replay and performance tracing are off — not left at a default, explicitly disabled. A crash report can still contain incidental technical fragments, which is why this section exists rather than claiming otherwise."
         ></p>
 
+        <h2 data-fr="Abonnement Premium" data-en="Premium subscription"></h2>
+        <p
+          data-fr="Si l’un de vous deux s’abonne, le paiement passe par Apple ou Google : Todo Bene ne voit jamais de carte ni de coordonnées bancaires. L’abonnement est géré par RevenueCat, une société basée aux États-Unis, qui reçoit l’identifiant aléatoire de ton compte et l’historique d’achat transmis par le store (l’offre, les dates, le prix, le pays) pour savoir si Premium est actif. RevenueCat ne reçoit ni tes tâches, ni ton prénom, ni ton adresse email. La date de fin de l’abonnement est aussi gardée avec ton compte chez Supabase, pour que ton ou ta partenaire profite de Premium."
+          data-en="If either of you subscribes, the payment goes through Apple or Google: Todo Bene never sees a card or bank details. The subscription is managed by RevenueCat, a company based in the United States, which receives your account's random identifier and the purchase history the store passes on (the plan, the dates, the price, the country) to know whether Premium is active. RevenueCat receives none of your tasks, your name or your email address. The subscription's end date is also kept with your account at Supabase, so that your partner gets Premium too."
+        ></p>
+
         <h2 data-fr="Où c’est stocké" data-en="Where it is stored"></h2>
         <p
-          data-fr="Le compte et les tâches sont hébergés par Supabase, dans l’Union européenne, et transmis en HTTPS chiffré. Les notifications passent par le service de notifications d’Expo, puis par Apple ou Google, qui reçoivent le titre de la notification pour pouvoir l’afficher. Le jeton de session reste sur ton téléphone pour te garder connecté(e). Aucun autre tiers ne reçoit tes données."
-          data-en="Your account and tasks are hosted by Supabase, in the European Union, and transmitted over encrypted HTTPS. Notifications travel through Expo's push service and then Apple or Google, who receive the notification's text in order to display it. Your session token stays on your phone to keep you signed in. No other third party receives your data."
+          data-fr="Le compte et les tâches sont hébergés par Supabase, dans l’Union européenne, et transmis en HTTPS chiffré. Les notifications passent par le service de notifications d’Expo, puis par Apple ou Google, qui reçoivent le titre de la notification pour pouvoir l’afficher. Le jeton de session reste sur ton téléphone pour te garder connecté(e). En dehors des services nommés sur cette page, aucun tiers ne reçoit tes données."
+          data-en="Your account and tasks are hosted by Supabase, in the European Union, and transmitted over encrypted HTTPS. Notifications travel through Expo's push service and then Apple or Google, who receive the notification's text in order to display it. Your session token stays on your phone to keep you signed in. Beyond the services named on this page, no third party receives your data."
         ></p>
 
         <h2 data-fr="Ce que ton ou ta partenaire voit" data-en="What your partner sees"></h2>
