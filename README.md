@@ -1,12 +1,13 @@
-# Todo Bene — privacy & support
+# Todo Bene — privacy, support & terms
 
-The public **Privacy Policy** and **Support** pages for the Todo Bene app, published via
-GitHub Pages. The app itself lives in a separate private repository; this repo holds only
-the pages the app links to from its Settings screen, and that App Store Connect requires
-to be live URLs.
+The public **Privacy Policy**, **Support** and **Terms of Use** pages for the Todo Bene app,
+published via GitHub Pages. The app itself lives in a separate private repository; this
+repo holds only the pages the app links to from its Settings screen and paywall, and that
+App Store Connect requires to be live URLs.
 
 - Privacy Policy → [`privacy.html`](./privacy.html)
 - Support → [`support.html`](./support.html)
+- Terms of Use → [`terms.html`](./terms.html)
 
 Live: https://octavator.github.io/todo-bene-legal/
 
